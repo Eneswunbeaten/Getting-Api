@@ -1,0 +1,17 @@
+<main class="container">
+    <div class="d-flex align-items-center p-3 my-3 text-black bg-purple rounded shadow-sm">
+      <div class="lh-1">
+        <h1 class="h6 mb-0 text-black lh-1">Social Media Comments</h1>
+        <small>{{today |date:'fullDate'}}</small>
+      </div>
+    </div>
+
+    <div *ngFor="let user of users" class="my-3 p-3 bg-body rounded shadow-sm">
+      <div *ngFor="let post of posts" class="d-flex text-body-secondary pt-3">
+        <p class="pb-3 mb-0 small lh-sm border-bottom">
+          <strong class="d-block text-gray-dark">{{user.name | uppercase}}</strong>
+          {{post.body}}.
+        </p>
+      </div>
+    </div>
+  </main>
